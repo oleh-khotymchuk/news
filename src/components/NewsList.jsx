@@ -13,7 +13,7 @@ const NewsList = ({ category, searchTerm }) => {
         ? 'https://news-backend-olehs-projects-220b7e06.vercel.app' // Replace with your deployed backend URL
         : 'http://localhost:3001';
       
-      let url = `${baseUrl}/api/news?`;
+      let url = `${baseUrl}/api/news`;
       const params = new URLSearchParams();
       
       if (category) {
