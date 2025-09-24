@@ -28,14 +28,15 @@ const SearchResults = () => {
 
 function App() {
   return (
-    <Router basename="/news">
+    <Router>
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/category/:category" element={<CategoryPage />} />
-          <Route path="/article/:title" element={<NewsDetail />} />
-          <Route path="/search/:searchTerm" element={<SearchResults />} />
+          <Route path="/news" element={<Home />} />
+          <Route path="/news/" element={<Home />} />
+          <Route path="/news/category/:category" element={<CategoryPage />} />
+          <Route path="/news/article/:title" element={<NewsDetail />} />
+          <Route path="/news/search/:searchTerm" element={<SearchResults />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

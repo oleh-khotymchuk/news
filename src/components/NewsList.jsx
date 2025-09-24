@@ -51,7 +51,7 @@ const NewsList = ({ category, searchTerm }) => {
     <div>
       <div className="news-list">
         {articlesWithPhoto.map((article, index) => (
-          <Link key={index} to={`/article/${encodeURIComponent(article.title)}`} state={{ article: article }} className="news-item-link">
+          <Link key={index} to={`/news/article/${encodeURIComponent(article.title)}`} state={{ article: article }} className="news-item-link">
             <div className="news-item">
               {article.urlToImage && <img src={article.urlToImage} alt={article.title} />}
               <div className="news-source">{article.source?.name || 'Unknown Source'}</div>
@@ -67,7 +67,7 @@ const NewsList = ({ category, searchTerm }) => {
           <ul>
             {articlesWithoutPhoto.map((article, index) => (
               <li key={index}>
-                <Link to={`/article/${encodeURIComponent(article.title)}`} state={{ article: article }}>
+                <Link to={`/news/article/${encodeURIComponent(article.title)}`} state={{ article: article }}>
                   {article.title}
                 </Link>
               </li>

@@ -9,7 +9,7 @@ const Header = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchTerm.trim()) {
-      navigate(`/search/${searchTerm.trim()}`);
+      navigate(`/news/search/${searchTerm.trim()}`);
       setSearchTerm('');
       setShowSearch(false);
     }
@@ -24,14 +24,14 @@ const Header = () => {
       <header>
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/category/business">Business</a></li>
-            <li><a href="/category/technology">Technology</a></li>
-            <li><a href="/category/entertainment">Entertainment</a></li>
-            <li><a href="/category/health">Health</a></li>
-            <li><a href="/category/science">Science</a></li>
-            <li><a href="/category/sports">Sports</a></li>
-            <li><a href="/category/general">General</a></li>
+            <li><a href="/news">Home</a></li>
+            <li><a href="/news/category/business">Business</a></li>
+            <li><a href="/news/category/technology">Technology</a></li>
+            <li><a href="/news/category/entertainment">Entertainment</a></li>
+            <li><a href="/news/category/health">Health</a></li>
+            <li><a href="/news/category/science">Science</a></li>
+            <li><a href="/news/category/sports">Sports</a></li>
+            <li><a href="/news/category/general">General</a></li>
           </ul>
         </nav>
         <button className="search-toggle" onClick={toggleSearch}>
