@@ -28,7 +28,7 @@ const SearchResults = () => {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/news">
       <Header />
       <main>
         <Routes>
