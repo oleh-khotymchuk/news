@@ -32,7 +32,6 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/news" element={<Home />} />
           <Route path="/news/" element={<Home />} />
           <Route path="/news/category/:category" element={<CategoryPage />} />
           <Route path="/news/article/:title" element={<NewsDetail />} />

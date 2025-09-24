@@ -24,7 +24,7 @@ const Header = () => {
       <header>
         <nav>
           <ul>
-            <li><a href="/news">Home</a></li>
+            <li><a href="/news/">Home</a></li>
             <li><a href="/news/category/business">Business</a></li>
             <li><a href="/news/category/technology">Technology</a></li>
             <li><a href="/news/category/entertainment">Entertainment</a></li>
