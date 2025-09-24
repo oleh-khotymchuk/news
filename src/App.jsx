@@ -36,6 +36,7 @@ function App() {
           <Route path="/category/:category" element={<CategoryPage />} />
           <Route path="/article/:title" element={<NewsDetail />} />
           <Route path="/search/:searchTerm" element={<SearchResults />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </main>
     </Router>
