@@ -10,7 +10,7 @@ const NewsList = ({ category, searchTerm }) => {
     const fetchNews = async () => {
       setLoading(true);
       const baseUrl = process.env.NODE_ENV === 'production' 
-        ? 'https://news-backend-olehs-projects-220b7e06.vercel.app/' // Replace with your deployed backend URL
+        ? 'https://news-backend-olehs-projects-220b7e06.vercel.app' // Replace with your deployed backend URL
         : 'http://localhost:3001';
       
       let url = `${baseUrl}/api/news?`;
