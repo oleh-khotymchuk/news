@@ -9,14 +9,21 @@ const NewsList = ({ category, searchTerm }) => {
   useEffect(() => {
     const fetchNews = async () => {
       setLoading(true);
-      const apiKey = '40965b539903469c9592b5d122922f20'; // IMPORTANT: Replace with your News API key
-      let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+      const baseUrl = process.env.NODE_ENV === 'production' 
+        ? 'https://news-backend-olehs-projects-220b7e06.vercel.app/' // Replace with your deployed backend URL
+        : 'http://localhost:3001';
+      
+      let url = `${baseUrl}/api/news?`;
+      const params = new URLSearchParams();
+      
       if (category) {
-        url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`;
+        params.append('category', category);
       }
       if (searchTerm) {
-        url = `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${apiKey}`;
+        params.append('q', searchTerm);
       }
+      
+      url += params.toString();
 
       try {
         const response = await fetch(url);
